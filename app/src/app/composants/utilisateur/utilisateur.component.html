@@ -1,0 +1,60 @@
+<h1>Premier Utilisateur</h1>
+<ul>
+  <li>Nom : {{nom}}</li>
+  <li>Age : {{age}}</li>
+  <li>Hobby :
+    <ul>
+      <li>{{hobby.first}}</li>
+      <li>{{hobby.second}}</li>
+      <li>{{hobby.third}}</li>
+    </ul>
+  </li>
+  <li>Email : {{email}}</li>
+</ul>
+
+<button (click)="onClick()">Plus d'informations</button>
+
+<h1>Editer</h1>
+<form [formGroup]="utilisateurForm" (ngSubmit)="onSubmit(utilisateurForm.value)">
+  <div>
+    <label for="nom">
+      Nom
+    </label>
+    <input id="nom" type="text" formControlName="nom">
+  </div>
+  <div>
+    <label for="age">
+      Age
+    </label>
+    <input id="age" type="number" formControlName="age">
+  </div>
+  <div>
+    <label for="hobby1">
+      Hobby 1
+    </label>
+    <input id="hobby1" type="text" formControlName="hobby1">
+  </div>
+  <div>
+    <label for="hobby2">
+      Hobby 2
+    </label>
+    <input id="hobby2" type="text" formControlName="hobby2">
+  </div>
+  <div>
+    <label for="hobby3">
+      Hobby 3
+    </label>
+    <input id="hobby3" type="text" formControlName="hobby3">
+  </div>
+  <div>
+    <label for="email">
+      Email
+    </label>
+    <input id="email" type="email" formControlName="email">
+  </div>
+
+
+  <button class="button" type="submit">Editer</button>
+
+</form>
+
